@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 
-// --- SVG Icons ---
-// Using heroicons (https://heroicons.com/) for a clean, professional look
+// --- SVG Icons (Heroicons) ---
 const ArrowRightIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
     <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
@@ -20,125 +19,159 @@ const CheckCircleIcon = ({ className }) => (
   </svg>
 );
 
-const VillainIcon = ({ children }) => (
-    <div className="flex flex-col items-center text-center p-4 rounded-lg bg-red-50 border border-red-200 h-full">
-        {children}
-    </div>
-);
-
-const VictoryIcon = ({ children }) => (
-    <div className="flex flex-col items-center text-center p-4 rounded-lg bg-green-50 border border-green-200 h-full">
-        {children}
-    </div>
-);
-
-
 // --- Slide Components ---
 
 const Slide1_Title = () => (
-  <div className="flex flex-col items-center justify-center h-full text-center p-8 bg-gray-900 text-white">
-    <div className="mb-4">
-        <svg className="w-24 h-24 text-blue-400" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8z" fill="currentColor"/><path d="M16.293 8.293L12 12.586l-4.293-4.293-1.414 1.414L12 15.414l5.707-5.707z" fill="currentColor"/></svg>
-    </div>
-    <h1 className="text-5xl md:text-7xl font-bold tracking-tight leading-tight">The Operations Autopilot</h1>
-    <p className="mt-4 text-xl md:text-2xl text-gray-300 max-w-3xl">
-      For the professional services firm ready to stop fighting operational friction and build an unfair competitive advantage.
+  <div className="flex flex-col items-center justify-center h-full text-center p-8 bg-slate-900 text-white">
+    <h1 className="text-5xl md:text-6xl font-black tracking-tight leading-tight">Your Firm Runs on Expertise.<br/>The Admin Work is Killing It.</h1>
+    <p className="mt-6 text-xl md:text-2xl text-slate-300 max-w-3xl">
+      It’s time to stop being the bottleneck and start being the visionary. We build the Autopilot System that frees you from the daily grind to work *on* your business, not just *in* it—Guaranteed.
     </p>
   </div>
 );
 
 const Slide2_Problem = () => (
-  <div className="p-8 md:p-12 bg-white">
-    <h2 className="text-center text-4xl font-bold text-gray-800 mb-2">Your Real Enemy Isn't the Competition... It's Friction.</h2>
-    <p className="text-center text-lg text-gray-600 mb-10">You have proven processes, but you're still fighting a hidden war against these three villains.</p>
-    <div className="grid md:grid-cols-3 gap-8">
-      <VillainIcon>
-        <svg className="w-16 h-16 text-red-500 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 4v5h5M5.47 9.53a7 7 0 112.46 5.97l-2.46-1.42"></path><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-        <h3 className="text-xl font-bold text-gray-800">The Manual Treadmill</h3>
-        <p className="mt-2 text-gray-600">Your solid processes are packed with manual labor—copying data, sending follow-ups, generating reports. You're running hard but staying in the same place.</p>
-      </VillainIcon>
-      <VillainIcon>
-        <svg className="w-16 h-16 text-red-500 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 11c0-3.517 2.5-6.566 5.68-7.318A9.004 9.004 0 0012 2C6.477 2 2 6.477 2 12s4.477 10 10 10c2.347 0 4.503-.923 6.12-2.465A6.98 6.98 0 0112 11z"></path><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 12a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
-        <h3 className="text-xl font-bold text-gray-800">The Silo Prison</h3>
-        <p className="mt-2 text-gray-600">Your tools are powerful, but they don't talk. Your data is trapped in islands, forcing you to act as the slow, error-prone human bridge between them.</p>
-      </VillainIcon>
-      <VillainIcon>
-        <svg className="w-16 h-16 text-red-500 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 3v18h18"></path></svg>
-        <h3 className="text-xl font-bold text-gray-800">The Innovation Gap</h3>
-        <p className="mt-2 text-gray-600">You see your competition getting faster. The fear of being outmaneuvered by a more agile firm is real, and it keeps you up at night.</p>
-      </VillainIcon>
+    <div className="p-8 md:p-12 bg-white h-full flex flex-col justify-center">
+        <div className="text-center">
+            <h2 className="text-sm font-bold uppercase tracking-widest text-indigo-600">THE REAL PROBLEM</h2>
+            <p className="mt-2 text-3xl md:text-4xl font-bold tracking-tight text-slate-900">Your Real Enemy Isn't the Competition... It's Friction.</p>
+            <p className="mt-4 text-lg text-slate-600 max-w-3xl mx-auto">You're a sophisticated operator fighting a hidden war against these critical business challenges.</p>
+        </div>
+        <div className="grid md:grid-cols-2 gap-8 mt-10 max-w-5xl mx-auto">
+            <div className="flex items-start p-4">
+                <div className="flex-shrink-0 w-8 h-8 bg-red-500 text-white rounded-full flex items-center justify-center font-bold mr-4 mt-1">1</div>
+                <div>
+                    <h3 className="text-xl font-bold text-slate-800">The "Broken Zap" Nightmare</h3>
+                    <p className="mt-1 text-slate-600">Your DIY automations have become a fragile liability. You're the only one who can fix them, and you spend more time in maintenance than the automations save.</p>
+                </div>
+            </div>
+            <div className="flex items-start p-4">
+                <div className="flex-shrink-0 w-8 h-8 bg-red-500 text-white rounded-full flex items-center justify-center font-bold mr-4 mt-1">2</div>
+                <div>
+                    <h3 className="text-xl font-bold text-slate-800">Key-Person Fragility</h3>
+                    <p className="mt-1 text-slate-600">Your entire operation hinges on a single person—maybe you, maybe a star Ops Manager. This single point of failure makes your business incredibly fragile.</p>
+                </div>
+            </div>
+            <div className="flex items-start p-4">
+                <div className="flex-shrink-0 w-8 h-8 bg-red-500 text-white rounded-full flex items-center justify-center font-bold mr-4 mt-1">3</div>
+                <div>
+                    <h3 className="text-xl font-bold text-slate-800">The Manual Coordination Bottleneck</h3>
+                    <p className="mt-1 text-slate-600">Growth has created exponential complexity. You've crossed a threshold where manual "checking in" is now the primary drag on your firm's productivity.</p>
+                </div>
+            </div>
+            <div className="flex items-start p-4">
+                <div className="flex-shrink-0 w-8 h-8 bg-red-500 text-white rounded-full flex items-center justify-center font-bold mr-4 mt-1">4</div>
+                <div>
+                    <h3 className="text-xl font-bold text-slate-800">The Expert-for-Admin Paycheck</h3>
+                    <p className="mt-1 text-slate-600">You're paying six-figure salaries for your best people to perform five-figure administrative work, destroying morale and wasting top-tier talent.</p>
+                </div>
+            </div>
+             <div className="flex items-start p-4">
+                <div className="flex-shrink-0 w-8 h-8 bg-red-500 text-white rounded-full flex items-center justify-center font-bold mr-4 mt-1">5</div>
+                <div>
+                    <h3 className="text-xl font-bold text-slate-800">The Scalability Wall</h3>
+                    <p className="mt-1 text-slate-600">You've hit a hard ceiling. You know you could land bigger clients, but you have zero confidence that your current operational infrastructure could handle the work without imploding.</p>
+                </div>
+            </div>
+             <div className="flex items-start p-4">
+                <div className="flex-shrink-0 w-8 h-8 bg-red-500 text-white rounded-full flex items-center justify-center font-bold mr-4 mt-1">6</div>
+                <div>
+                    <h3 className="text-xl font-bold text-slate-800">The Unsellable Business</h3>
+                    <p className="mt-1 text-slate-600">You haven't built a business; you've built a high-stakes, high-stress job. Without systems independent of you, your firm has a low valuation and no real exit potential.</p>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
 );
 
 const Slide3_Victory = () => (
-  <div className="p-8 md:p-12 bg-gray-50">
-    <h2 className="text-center text-4xl font-bold text-gray-800 mb-2">Imagine This in 90 Days...</h2>
-    <p className="text-center text-lg text-gray-600 mb-10">This isn't just about saving time. It's about achieving operational freedom.</p>
-    <div className="grid md:grid-cols-3 gap-8">
-      <VictoryIcon>
-        <svg className="w-16 h-16 text-green-500 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 17v-2a4 4 0 014-4h2a4 4 0 014 4v2m-6 4h.01M12 6h.01M6 6h.01M6 12h.01M6 18h.01M12 18h.01M18 18h.01M18 12h.01M18 6h.01"></path></svg>
-        <h3 className="text-xl font-bold text-gray-800">A Central Business Hub</h3>
-        <p className="mt-2 text-gray-600">You operate from a single source of truth. A proprietary internal system that gives you complete visibility and control over your entire firm.</p>
-      </VictoryIcon>
-      <VictoryIcon>
-        <svg className="w-16 h-16 text-green-500 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-        <h3 className="text-xl font-bold text-gray-800">An Empowered Team</h3>
-        <p className="mt-2 text-gray-600">Your team is freed from 80% of their administrative work, allowing them to serve clients at a level your competition can't match.</p>
-      </VictoryIcon>
-      <VictoryIcon>
-        <svg className="w-16 h-16 text-green-500 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m-6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path><path d="M20.62 10.38a9 9 0 01-11.24 11.24" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" ></path></svg>
-        <h3 className="text-xl font-bold text-gray-800">True Time Freedom</h3>
-        <p className="mt-2 text-gray-600">You leave for a two-week vacation and don't check your email once, with total confidence that your Autopilot system is running the firm flawlessly.</p>
-      </VictoryIcon>
+    <div className="p-8 md:p-12 bg-slate-50 h-full flex flex-col justify-center">
+        <div className="text-center">
+            <h2 className="text-sm font-bold uppercase tracking-widest text-indigo-600">THE PRIZE</h2>
+            <p className="mt-2 text-3xl md:text-4xl font-bold tracking-tight text-slate-900">This is About Achieving Operational Freedom</p>
+            <p className="mt-4 text-lg text-slate-600 max-w-3xl mx-auto">This isn't just about saving time. It's about installing a new operating system for your firm to win in these six key areas.</p>
+        </div>
+        <div className="grid md:grid-cols-2 gap-8 mt-10 max-w-5xl mx-auto">
+            <div className="flex items-start p-4">
+                <div className="flex-shrink-0 w-8 h-8 bg-green-600 text-white rounded-full flex items-center justify-center font-bold mr-4 mt-1">1</div>
+                <div>
+                    <h3 className="text-xl font-bold text-slate-800">The "Effortless Oversight" Dashboard</h3>
+                    <p className="mt-1 text-slate-600">Go from being the primary "doer" to the strategic "overseer." A single dashboard gives you the health of your firm in minutes, so you can manage the system, not the tasks.</p>
+                </div>
+            </div>
+            <div className="flex items-start p-4">
+                <div className="flex-shrink-0 w-8 h-8 bg-green-600 text-white rounded-full flex items-center justify-center font-bold mr-4 mt-1">2</div>
+                <div>
+                    <h3 className="text-xl font-bold text-slate-800">The Scalable Delivery Engine</h3>
+                    <p className="mt-1 text-slate-600">A robust infrastructure that allows you to confidently double your client load without doubling the chaos, shattering your growth ceiling.</p>
+                </div>
+            </div>
+             <div className="flex items-start p-4">
+                <div className="flex-shrink-0 w-8 h-8 bg-green-600 text-white rounded-full flex items-center justify-center font-bold mr-4 mt-1">3</div>
+                <div>
+                    <h3 className="text-xl font-bold text-slate-800">The "Anti-Fragile" Firm</h3>
+                    <p className="mt-1 text-slate-600">The peace of mind that comes from de-risking your operations. Critical processes are embedded in a resilient system, not a person's memory.</p>
+                </div>
+            </div>
+             <div className="flex items-start p-4">
+                <div className="flex-shrink-0 w-8 h-8 bg-green-600 text-white rounded-full flex items-center justify-center font-bold mr-4 mt-1">4</div>
+                <div>
+                    <h3 className="text-xl font-bold text-slate-800">The "A-Player" Playground</h3>
+                    <p className="mt-1 text-slate-600">An environment so efficient it becomes a competitive advantage in the war for talent, allowing your experts to focus on high-impact work.</p>
+                </div>
+            </div>
+             <div className="flex items-start p-4">
+                <div className="flex-shrink-0 w-8 h-8 bg-green-600 text-white rounded-full flex items-center justify-center font-bold mr-4 mt-1">5</div>
+                <div>
+                    <h3 className="text-xl font-bold text-slate-800">Systematized Excellence</h3>
+                    <p className="mt-1 text-slate-600">"Clone" the best practices of your top performers by embedding their genius into automated workflows that raise the quality and consistency of your entire team.</p>
+                </div>
+            </div>
+             <div className="flex items-start p-4">
+                <div className="flex-shrink-0 w-8 h-8 bg-green-600 text-white rounded-full flex items-center justify-center font-bold mr-4 mt-1">6</div>
+                <div>
+                    <h3 className="text-xl font-bold text-slate-800">The Sellable Asset</h3>
+                    <p className="mt-1 text-slate-600">Transform your business from a person-dependent job into a valuable, systems-driven asset with a premium valuation, giving you true freedom.</p>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
 );
 
-
 const Slide4_Method = () => (
-    <div className="p-8 md:p-12 bg-white">
+    <div className="p-8 md:p-12 bg-white h-full flex flex-col justify-center">
         <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-800">Our Signature Method: The Operations Loop™</h2>
-            <p className="mt-2 text-lg text-gray-600 max-w-3xl mx-auto">We don't just complete a project; we build a system that generates its own momentum. Each stage makes the next more powerful.</p>
+            <h2 className="text-4xl font-bold text-slate-800">Our Signature Method: The Operations Loop™</h2>
+            <p className="mt-2 text-lg text-slate-600 max-w-3xl mx-auto">We don't just complete a project; we build a system that generates its own momentum. Each stage makes the next more powerful.</p>
         </div>
-        <div className="relative">
-            {/* Dashed Circle for background */}
-            <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-96 h-96 border-4 border-dashed border-gray-300 rounded-full animate-spin-slow"></div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <div className="bg-slate-50 p-6 rounded-xl shadow-md border border-slate-200">
+                <div className="flex items-center mb-3">
+                    <div className="w-12 h-12 rounded-full bg-indigo-600 text-white flex items-center justify-center text-2xl font-bold mr-4 flex-shrink-0">1</div>
+                    <h3 className="text-2xl font-bold text-slate-800">Blueprint</h3>
+                </div>
+                <p className="text-slate-600 ml-16">We diagnose your biggest bottleneck in a **Day 1 Deep-Dive Workshop** and architect the foundation of your Unified Data Hub.</p>
             </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-12 relative">
-                <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-200">
-                    <div className="flex items-center mb-3">
-                        <div className="w-12 h-12 rounded-full bg-blue-500 text-white flex items-center justify-center text-2xl font-bold mr-4">1</div>
-                        <h3 className="text-2xl font-bold text-gray-800">Blueprint</h3>
-                    </div>
-                    <p className="text-gray-600 ml-16">We diagnose your biggest bottleneck in a live session and architect the foundation of your Unified Data Hub.</p>
+            <div className="bg-slate-50 p-6 rounded-xl shadow-md border border-slate-200">
+                <div className="flex items-center mb-3">
+                    <div className="w-12 h-12 rounded-full bg-indigo-600 text-white flex items-center justify-center text-2xl font-bold mr-4 flex-shrink-0">2</div>
+                    <h3 className="text-2xl font-bold text-slate-800">Engine</h3>
                 </div>
-                <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-200">
-                    <div className="flex items-center mb-3">
-                        <div className="w-12 h-12 rounded-full bg-blue-500 text-white flex items-center justify-center text-2xl font-bold mr-4">2</div>
-                        <h3 className="text-2xl font-bold text-gray-800">Engine</h3>
-                    </div>
-                    <p className="text-gray-600 ml-16">We build your Central Operations Database and forge the automations that connect your tools into one cohesive system.</p>
+                <p className="text-slate-600 ml-16">We build your central database and forge the automations that connect your tools into one cohesive system.</p>
+            </div>
+            <div className="bg-slate-50 p-6 rounded-xl shadow-md border border-slate-200">
+                <div className="flex items-center mb-3">
+                    <div className="w-12 h-12 rounded-full bg-indigo-600 text-white flex items-center justify-center text-2xl font-bold mr-4 flex-shrink-0">3</div>
+                    <h3 className="text-2xl font-bold text-slate-800">Launch</h3>
                 </div>
-                {/* SWAPPED Ascent to be 3rd */}
-                <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-200">
-                    <div className="flex items-center mb-3">
-                        <div className="w-12 h-12 rounded-full bg-blue-500 text-white flex items-center justify-center text-2xl font-bold mr-4">4</div>
-                        <h3 className="text-2xl font-bold text-gray-800">Ascent</h3>
-                    </div>
-                    <p className="text-gray-600 ml-16">We measure the ROI on a live dashboard and use the data to optimize for continuous, compounding improvement.</p>
+                <p className="text-slate-600 ml-16">We validate the system with bite-sized testing and empower your team with training to ensure confident adoption.</p>
+            </div>
+            <div className="bg-slate-50 p-6 rounded-xl shadow-md border border-slate-200">
+                <div className="flex items-center mb-3">
+                    <div className="w-12 h-12 rounded-full bg-indigo-600 text-white flex items-center justify-center text-2xl font-bold mr-4 flex-shrink-0">4</div>
+                    <h3 className="text-2xl font-bold text-slate-800">Ascent</h3>
                 </div>
-                {/* SWAPPED Launch to be 4th */}
-                <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-200">
-                    <div className="flex items-center mb-3">
-                        <div className="w-12 h-12 rounded-full bg-blue-500 text-white flex items-center justify-center text-2xl font-bold mr-4">3</div>
-                        <h3 className="text-2xl font-bold text-gray-800">Launch</h3>
-                    </div>
-                    <p className="text-gray-600 ml-16">We validate the system with bite-sized testing and empower your team with training to ensure confident adoption.</p>
-                </div>
+                <p className="text-slate-600 ml-16">We measure the ROI on a live dashboard and use the data to optimize for continuous, compounding improvement.</p>
             </div>
         </div>
     </div>
@@ -148,48 +181,48 @@ const FeatureValueItem = ({ children, value }) => (
     <li className="flex items-start">
         <CheckCircleIcon className="w-6 h-6 text-current mr-3 mt-1 flex-shrink-0" />
         <div className="flex-grow">
-            {children}
-            <span className="text-sm text-gray-400 ml-2">({value} Value)</span>
+            <span className="text-slate-800">{children}</span>
+            <span className="text-sm text-slate-400 ml-2">({value} Value)</span>
         </div>
     </li>
 );
 
 const Slide5_TheOfferAndValue = () => (
-    <div className="p-8 md:p-12 bg-gray-50">
-        <h2 className="text-center text-4xl font-bold text-gray-800 mb-10">Here's What You Get</h2>
+    <div className="p-8 md:p-12 bg-slate-50 h-full flex flex-col justify-center">
+        <h2 className="text-center text-4xl font-bold text-slate-800 mb-10">Here's What You Get</h2>
         <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
             {/* Rapid Results */}
-            <div className="border-2 border-blue-500 rounded-xl p-8 bg-white shadow-2xl flex flex-col">
-                <h3 className="text-3xl font-bold text-blue-600">Rapid Results</h3>
-                <p className="text-gray-600 mt-2 mb-6">For immediate relief from your most frustrating bottlenecks.</p>
-                <ul className="space-y-4 text-gray-700 text-blue-600 flex-grow">
-                    <FeatureValueItem value="$7,500"><strong>Unified Data Hub (Starter):</strong> The foundation for your core automations.</FeatureValueItem>
-                    <FeatureValueItem value="$15,000"><strong>2-3 Critical Automations:</strong> We tackle your biggest time-drains first.</FeatureValueItem>
-                    <FeatureValueItem value="$2,000"><strong>Team Enablement & Training:</strong> Live handover and video SOPs to ensure confidence.</FeatureValueItem>
+            <div className="border border-slate-200 rounded-xl p-8 bg-white shadow-lg flex flex-col">
+                <h3 className="text-3xl font-bold text-indigo-600">Rapid Results</h3>
+                <p className="text-slate-600 mt-2 mb-6">The 30-Day Sprint to immediate relief from your most frustrating bottlenecks.</p>
+                <ul className="space-y-4 text-green-600 flex-grow">
+                    <FeatureValueItem value="$5,000"><strong>The "Blueprint" Strategic Diagnostic:</strong> A 3-hour deep-dive and strategic plan to re-engineer your most critical process for automation readiness.</FeatureValueItem>
+                    <FeatureValueItem value="$10,000"><strong>2 Critical "Quick Win" Automations:</strong> We build the automations that attack your biggest bottleneck first, providing immediate time savings and relief.</FeatureValueItem>
+                    <FeatureValueItem value="$5,000"><strong>Unified Data Hub (Starter):</strong> The foundation for your core automations.</FeatureValueItem>
                     <FeatureValueItem value="$5,000"><strong>Client Data Shield Protocol:</strong> Protecting your sensitive client information.</FeatureValueItem>
-                    <FeatureValueItem value="$1,000"><strong>White-Glove Tech Setup:</strong> We handle all the software setup and payments.</FeatureValueItem>
+                    <FeatureValueItem value="$2,000"><strong>Team Enablement & Training:</strong> Live handover and video SOPs to ensure confidence.</FeatureValueItem>
                 </ul>
-                <div className="mt-8 pt-6 border-t-2 border-dashed border-gray-200 text-right">
-                    <p className="text-gray-500">Total Standalone Value</p>
-                    <p className="text-4xl font-bold text-gray-800">$30,500</p>
+                <div className="mt-8 pt-6 border-t-2 border-dashed border-slate-200 text-right">
+                    <p className="text-slate-500">Total Standalone Value</p>
+                    <p className="text-4xl font-bold text-slate-800">$27,000</p>
                 </div>
             </div>
 
             {/* Full Transformation */}
-            <div className="border-2 border-purple-500 rounded-xl p-8 bg-gray-900 text-white shadow-2xl flex flex-col">
-                <h3 className="text-3xl font-bold text-purple-400">Full Transformation</h3>
-                <p className="text-gray-300 mt-2 mb-6">To build a proprietary "Autopilot" system and create an unfair competitive advantage.</p>
-                <ul className="space-y-4 text-gray-200 text-purple-400 flex-grow">
-                    <FeatureValueItem value="$15,000"><strong>Central Operations Database (Full):</strong> Your firm's complete internal operating system.</FeatureValueItem>
+            <div className="border-2 border-indigo-500 rounded-xl p-8 bg-white shadow-2xl flex flex-col ring-4 ring-indigo-200">
+                <h3 className="text-3xl font-bold text-indigo-600">Full Transformation</h3>
+                <p className="text-slate-600 mt-2 mb-6">Build a proprietary "Autopilot" system and create an unfair competitive advantage.</p>
+                <ul className="space-y-4 text-green-600 flex-grow">
+                    <FeatureValueItem value="$15,000"><strong>The Firm's "Brain" (Unified OS):</strong> The firm's complete "brain." A custom-architected system to manage all operational data.</FeatureValueItem>
                     <FeatureValueItem value="$35,000"><strong>7+ Integrated Automations:</strong> A full suite connecting all your tools to the central hub.</FeatureValueItem>
-                    <FeatureValueItem value="$4,500"><strong>The Automation Blueprint (SOPs):</strong> A permanent asset for training and continuity.</FeatureValueItem>
+                    <FeatureValueItem value="$4,500"><strong>The Automation Blueprint (Living SOPs):</strong> A complete library of video walkthroughs and documentation, making the system ownable and transferable.</FeatureValueItem>
                     <FeatureValueItem value="$4,000"><strong>Team Mastery & Support Program:</strong> Dedicated support and training.</FeatureValueItem>
                     <FeatureValueItem value="$2,500"><strong>Live ROI & Performance Dashboard:</strong> See your value created in real-time.</FeatureValueItem>
-                    <FeatureValueItem value="$5,000+"><strong>All Foundational Features:</strong> Including the Security Protocol & Tech Setup.</FeatureValueItem>
+                    <FeatureValueItem value="$5,000+"><strong>All Foundational Features Included</strong></FeatureValueItem>
                 </ul>
-                <div className="mt-8 pt-6 border-t-2 border-dashed border-gray-700 text-right">
-                    <p className="text-gray-400">Total Standalone Value</p>
-                    <p className="text-4xl font-bold text-white">$66,000</p>
+                <div className="mt-8 pt-6 border-t-2 border-dashed border-slate-200 text-right">
+                    <p className="text-slate-500">Total Standalone Value</p>
+                    <p className="text-4xl font-bold text-slate-800">$66,000</p>
                 </div>
             </div>
         </div>
@@ -197,31 +230,31 @@ const Slide5_TheOfferAndValue = () => (
 );
 
 const Slide6_TheInvestment = () => (
-    <div className="p-8 md:p-12 bg-white">
-        <h2 className="text-center text-4xl font-bold text-gray-800 mb-10">An Investment in Freedom, Not an Expense</h2>
-        <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-             <div className="border border-gray-200 rounded-xl p-8 text-center bg-gray-50 flex flex-col justify-between">
+    <div className="p-8 md:p-12 bg-white h-full flex flex-col justify-center">
+        <h2 className="text-center text-4xl font-bold text-slate-800 mb-10">An Investment in Freedom, Not an Expense</h2>
+        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+             <div className="border border-slate-200 rounded-xl p-8 text-center bg-slate-50 flex flex-col justify-between">
                 <div>
-                    <h3 className="text-2xl font-bold text-blue-600">Rapid Results</h3>
-                    <p className="text-gray-500 mt-2">Total Value:</p>
-                    <p className="text-5xl font-extrabold text-gray-800 my-2 line-through">$30,500</p>
+                    <h3 className="text-2xl font-bold text-indigo-600">Rapid Results</h3>
+                    <p className="text-slate-500 mt-2">Total Value:</p>
+                    <p className="text-5xl font-extrabold text-slate-800 my-2">$27,000</p>
                 </div>
                 <div>
-                    <p className="text-gray-500 mt-6">Your Investment Today:</p>
-                    <p className="text-6xl font-bold text-blue-600">$6,500</p>
-                    <p className="text-gray-500 mt-2">(or 3 payments of $2,400)</p>
+                    <p className="text-slate-500 mt-6">Your Investment Today:</p>
+                    <p className="text-6xl font-bold text-indigo-600">$6,500</p>
+                    <p className="text-slate-500 mt-2">(or 3 payments of $2,400)</p>
                 </div>
             </div>
-             <div className="border border-gray-200 rounded-xl p-8 text-center bg-gray-900 text-white flex flex-col justify-between">
+             <div className="border-2 border-indigo-500 rounded-xl p-8 text-center bg-slate-900 text-white flex flex-col justify-between">
                 <div>
-                    <h3 className="text-2xl font-bold text-purple-400">Full Transformation</h3>
-                    <p className="text-gray-400 mt-2">Total Value:</p>
-                    <p className="text-5xl font-extrabold text-gray-300 my-2 line-through">$66,000</p>
+                    <h3 className="text-2xl font-bold text-indigo-400">Full Transformation</h3>
+                    <p className="text-slate-400 mt-2">Total Value:</p>
+                    <p className="text-5xl font-extrabold text-slate-300 my-2">$66,000</p>
                 </div>
                 <div>
-                    <p className="text-gray-400 mt-6">Your Investment Today:</p>
-                    <p className="text-6xl font-bold text-purple-400">$12,000</p>
-                    <p className="text-gray-400 mt-2">(or 3 payments of $4,500)</p>
+                    <p className="text-slate-400 mt-6">Your Investment Today:</p>
+                    <p className="text-6xl font-bold text-indigo-400">$12,000</p>
+                    <p className="text-slate-400 mt-2">(or 3 payments of $4,500)</p>
                 </div>
             </div>
         </div>
@@ -230,18 +263,18 @@ const Slide6_TheInvestment = () => (
 
 
 const Slide7_NextSteps = () => (
-    <div className="p-8 md:p-12 bg-gray-900 text-white h-full flex flex-col justify-center items-center text-center">
+    <div className="p-8 md:p-12 bg-slate-900 text-white h-full flex flex-col justify-center items-center text-center">
         <h2 className="text-4xl md:text-5xl font-bold">Ready to Build Your Autopilot?</h2>
-        <p className="mt-4 text-xl text-gray-300 max-w-3xl">To ensure this level of intensive, hands-on success, I can only onboard **one new client per month**. The next slot starts **August 2025**.</p>
-        <div className="mt-8 border-t-2 border-b-2 border-blue-400 py-6 px-8">
+        <p className="mt-4 text-xl text-slate-300 max-w-3xl">To ensure this level of intensive, hands-on success, I can only onboard **one new client per month**. The next slot starts **September 2025**.</p>
+        <div className="mt-8 border-t-2 border-b-2 border-indigo-400 py-6 px-8 bg-slate-800/50 rounded-lg">
             <h3 className="text-2xl font-bold text-white mb-2">Your Guarantee: The Risk is on Us.</h3>
-            <p className="text-gray-300">We guarantee we will save your team a minimum of 10 hours per week within 30 days. If not, we work for free until we do.</p>
+            <p className="text-slate-300 max-w-xl">We guarantee we will save your team a minimum of 10 hours per week within 30 days. If not, we work for free until we do.</p>
         </div>
         <div className="mt-10">
             <h3 className="text-2xl font-bold">The Next Step is Clear.</h3>
-            <p className="mt-2 text-lg text-gray-300">You've seen the plan. You understand the value. The next step is to secure your slot.</p>
-            <button className="mt-6 bg-blue-500 hover:bg-blue-600 text-white font-bold py-4 px-8 rounded-lg text-xl shadow-lg transform hover:scale-105 transition-transform duration-300">
-                Secure Your Slot & Begin Onboarding
+            <p className="mt-2 text-lg text-slate-300">You've seen the plan. You understand the value. The next step is to secure your slot.</p>
+            <button className="mt-6 bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-4 px-8 rounded-lg text-xl shadow-lg transform hover:scale-105 transition-transform duration-300">
+                Secure My September Slot & Begin Onboarding
             </button>
         </div>
     </div>
@@ -270,21 +303,14 @@ const App = () => {
   };
 
   return (
-    <div className="font-sans bg-gray-100 flex flex-col" style={{ height: '100vh' }}>
+    <div className="font-sans bg-slate-100 flex flex-col" style={{ height: '100vh' }}>
       <style>
         {`
-          @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&display=swap');
+          @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap');
           .font-sans { font-family: 'Inter', sans-serif; }
-          @keyframes spin-slow {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-          }
-          .animate-spin-slow {
-            animation: spin-slow 20s linear infinite;
-          }
         `}
       </style>
-      <div className="flex-grow relative overflow-hidden shadow-2xl">
+      <div className="flex-grow relative overflow-hidden shadow-2xl bg-white">
         {slides.map((slide, index) => (
           <div
             key={index}
@@ -295,17 +321,17 @@ const App = () => {
           </div>
         ))}
       </div>
-      <div className="bg-gray-800 text-white p-4 flex justify-between items-center">
-        <button onClick={prevSlide} className="flex items-center space-x-2 px-4 py-2 rounded-lg hover:bg-gray-700 transition-colors">
+      <div className="bg-slate-800 text-white p-4 flex justify-between items-center shadow-inner">
+        <button onClick={prevSlide} className="flex items-center space-x-2 px-4 py-2 rounded-lg hover:bg-slate-700 transition-colors">
           <ArrowLeftIcon />
           <span>Previous</span>
         </button>
         <div className="flex space-x-2">
             {slides.map((_, index) => (
-                <button key={index} onClick={() => setCurrentSlide(index)} className={`w-3 h-3 rounded-full ${currentSlide === index ? 'bg-blue-500' : 'bg-gray-600 hover:bg-gray-500'}`}></button>
+                <button key={index} onClick={() => setCurrentSlide(index)} className={`w-3 h-3 rounded-full ${currentSlide === index ? 'bg-indigo-500' : 'bg-slate-600 hover:bg-slate-500'}`}></button>
             ))}
         </div>
-        <button onClick={nextSlide} className="flex items-center space-x-2 px-4 py-2 rounded-lg hover:bg-gray-700 transition-colors">
+        <button onClick={nextSlide} className="flex items-center space-x-2 px-4 py-2 rounded-lg hover:bg-slate-700 transition-colors">
           <span>Next</span>
           <ArrowRightIcon />
         </button>
