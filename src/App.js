@@ -25,9 +25,9 @@ const CheckCircleIcon = ({ className }) => (
 const Slide1_Title = () => (
   <div className="flex flex-col items-center justify-center h-full text-center p-8 bg-slate-900 text-white">
     <h1 className="text-5xl md:text-6xl font-black tracking-tight leading-tight">You Wouldn't Let Clients DIY Your Services</h1>
-    <h1 className="text-5xl md:text-6xl font-black tracking-tight leading-tight">While DIYing Your Operations.</h1>
+    <h1 className="text-5xl md:text-6xl font-black tracking-tight leading-tight">But You Do For Your Operations.</h1>
     <p className="mt-6 text-xl md:text-2xl text-slate-300 max-w-3xl">
-      You're a premium provider because you deliver expertise clients can't replicate. Your operations deserve the same professional touch. Stop being your own worst client.
+      You're a premium provider because you deliver expertise clients can't replicate. Your operations deserve the same professional touch.
     </p>
   </div>
 );
@@ -190,30 +190,31 @@ const Slide5_TheOfferAndValue = () => (
 
 const Slide6_TheInvestment = () => (
     <div className="p-8 md:p-12 bg-white h-full flex flex-col justify-center">
-        <h2 className="text-center text-4xl font-bold text-slate-800 mb-10">An Investment in Freedom, Not an Expense</h2>
+        <h2 className="text-center text-4xl font-bold text-slate-800 mb-4">The Smart Investment</h2>
+        <p className="text-center text-lg text-slate-600 mb-10 max-w-3xl mx-auto">Compare the cost of our strategic implementation against the expense, time, and risk of hiring internally.</p>
         <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
              <div className="border border-slate-200 rounded-xl p-8 text-center bg-slate-50 flex flex-col justify-between">
                 <div>
-                    <h3 className="text-2xl font-bold text-indigo-600">Rapid Results</h3>
-                    <p className="text-slate-500 mt-2">Total Value:</p>
-                    <p className="text-5xl font-extrabold text-slate-800 my-2">$27,000</p>
-                </div>
-                <div>
-                    <p className="text-slate-500 mt-6">Your Investment Today:</p>
+                    <h3 className="text-2xl font-bold text-slate-800 mb-1">Hiring a No-Code Developer</h3>
+                    <p className="text-5xl font-extrabold text-slate-800">$95,000+</p>
+                    <p className="text-slate-500 mb-6">Annual Cost (Salary, Benefits, etc.)</p>
+                    <div className="text-slate-400 font-bold mb-4">VS.</div>
+                    <h3 className="text-2xl font-bold text-indigo-600 mb-1">Rapid Results</h3>
                     <p className="text-6xl font-bold text-indigo-600">$6,500</p>
-                    <p className="text-slate-500 mt-2 text-base">(or 3 payments of $2,400)</p>
+                    <p className="text-slate-500 mb-1">One-Time Investment</p>
+                    <p className="text-slate-500 text-base">(or 3 payments of $2,400)</p>
                 </div>
             </div>
              <div className="border-2 border-indigo-500 rounded-xl p-8 text-center bg-slate-900 text-white flex flex-col justify-between">
                 <div>
-                    <h3 className="text-2xl font-bold text-indigo-400">Full Transformation</h3>
-                    <p className="text-slate-400 mt-2">Total Value:</p>
-                    <p className="text-5xl font-extrabold text-slate-300 my-2">$66,000</p>
-                </div>
-                <div>
-                    <p className="text-slate-400 mt-6">Your Investment Today:</p>
+                    <h3 className="text-2xl font-bold text-white mb-1">Hiring a Team</h3>
+                    <p className="text-5xl font-extrabold text-white">$185,000+</p>
+                    <p className="text-slate-400 mb-6">Annual Cost (Ops Strategist + Developer)</p>
+                    <div className="text-slate-500 font-bold mb-4">VS.</div>
+                    <h3 className="text-2xl font-bold text-indigo-400 mb-1">Full Transformation</h3>
                     <p className="text-6xl font-bold text-indigo-400">$12,000</p>
-                    <p className="text-slate-400 mt-2 text-base">(or 3 payments of $4,500)</p>
+                    <p className="text-slate-400 mb-1">One-Time Investment</p>
+                    <p className="text-slate-400 text-base">(or 3 payments of $4,500)</p>
                 </div>
             </div>
         </div>
